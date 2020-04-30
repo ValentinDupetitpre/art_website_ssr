@@ -13,16 +13,20 @@ import NotFoundPage from './components/page/not-found'
 
 import {APP_NAME} from './config'
 
+import './app.css'
+
 const App = () => {
     return (
-        <div>
+        <div className="app-wrapper">
             <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
             <Navigation />
-            <Switch>
-                <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
-                <Route path={COLLECTION_PAGE_ROUTE} render={() => <CollectionPage />} />
-                <Route component={NotFoundPage} />
-            </Switch>
+            <div className="content">
+                <Switch>
+                    <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
+                    <Route path={COLLECTION_PAGE_ROUTE} render={() => <CollectionPage />} />
+                    <Route component={NotFoundPage} />
+                </Switch>
+            </div>
         </div>
     )
 }

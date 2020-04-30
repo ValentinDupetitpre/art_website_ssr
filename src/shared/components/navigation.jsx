@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import {
   HOME_PAGE_ROUTE,
   COLLECTION_PAGE_ROUTE,
+  INFORMATION_PAGE_ROUTE,
   NOT_FOUND_PAGE_ROUTE,
 } from '../routes'
 
@@ -10,19 +11,21 @@ import './navigation.css'
 
 const Navigation = () => {
     const routes = [
-        { route: HOME_PAGE_ROUTE, label: 'Home' },
-        { route: COLLECTION_PAGE_ROUTE, label: 'Gallerie' },
-        { route: NOT_FOUND_PAGE_ROUTE, label: '404' }
+        { route: HOME_PAGE_ROUTE, label: 'Accueil' },
+        { route: COLLECTION_PAGE_ROUTE, label: 'Galeries' },
+        { route: INFORMATION_PAGE_ROUTE, label: 'Informations' },
+        { route: NOT_FOUND_PAGE_ROUTE, label: 'Contact' },
     ]
-  
-    return(
-        <section className="drawer">
 
-            <nav>
-                <ul>
+    return(
+        <section>
+            <nav className="drawer">
+                <p className="title">Menu</p>
+                <hr className="divider"/>
+                <ul className="links">
                 {routes.map(link => (
-                    <li key={link.route}>
-                    <NavLink to={link.route} activeStyle={{ color: 'blue' }} exact>{link.label}</NavLink>
+                    <li className="link" key={link.route}>
+                    <NavLink className="text" to={link.route} activeStyle={{ fontWeight: 'bold' }} exact>{link.label}</NavLink>
                     </li>
                 ))}
                 </ul>

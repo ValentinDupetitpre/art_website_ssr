@@ -22,6 +22,7 @@ const renderApp = (location, routerContext) => {
         ${head.title}
         ${head.meta}
         <link rel="icon" type="image/x-icon" href="${STATIC_PATH}/favicon.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
       </head>
       <body>
         <div class="${APP_CONTAINER_CLASS}">${appHtml}</div>

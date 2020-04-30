@@ -1,13 +1,93 @@
 .drawer{
-    position: fixed;
-    width: 280px;
-    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 240px;
     height: 100%;
-    left: 0;
+    max-height: 100%;
+    position: absolute;
     top: 0;
-    z-index: 200;
-    background: blue;
-    padding: 32px 16px;
+    left: 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
-    transition: transform 0.3s ease-out;
+    border-right: 1px solid rgb(224,224,224);
+    background: rgb(250,250,250);
+    transform: translateX(-250px);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    color: rgb(66,66,66);
+    overflow: visible;
+    overflow-y: auto;
+    z-index: 5;
+    transform: translateX(0);
+    background: linear-gradient(to right, #ECE9E6, #FFFFFF);
+    justify-content: center;
+}
+
+.drawer .title{
+    line-height: 64px;
+    padding-left: 40px;
+    display: block;
+    position: relative;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+}
+
+.drawer .divider{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.drawer .links{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    padding-top: 16px;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+.drawer .links .text{
+    display: block;
+    flex-shrink: 0;
+    padding: 16px 40px;
+    margin: 0;
+    color: #757575;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    opacity: 0.87;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.drawer .links .link:hover{
+    background-color:rgba(0, 0, 0, 0.05);
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.close {
+    transform: translateX(-100%);
 }
