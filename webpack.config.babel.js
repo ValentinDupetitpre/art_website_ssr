@@ -1,6 +1,6 @@
 import webpack from 'webpack'
 import path from 'path'
-
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { WDS_PORT } from './src/shared/config'
 import { isProd } from './src/shared/util'
 
@@ -16,7 +16,15 @@ export default {
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
+      { 
+        test: /\.(js|jsx)$/, 
+        use: 'babel-loader', 
+        exclude: /node_modules/ 
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ],
   },
   devtool: isProd ? false : 'source-map',
@@ -35,5 +43,8 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      favicon: "./public/favicon.ico"
+    })
   ],
 }

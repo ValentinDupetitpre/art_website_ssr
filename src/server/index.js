@@ -5,8 +5,6 @@ import routing from './routing'
 import { STATIC_PATH, WEB_PORT } from '../shared/config'
 import { isProd } from '../shared/util'
 
-// import renderApp from './render-app'
-
 const app = express()
 
 app.use(compression())
