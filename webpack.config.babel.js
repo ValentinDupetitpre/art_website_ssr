@@ -45,6 +45,9 @@ export default {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       favicon: "./public/favicon.ico"
+    }),
+    new webpack.DefinePlugin({
+      'process.env.BROWSER': JSON.stringify(true),
     })
   ],
 }

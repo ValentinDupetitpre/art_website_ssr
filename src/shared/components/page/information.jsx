@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import  {APP_NAME} from '../../config'
 
-const Home = () => {
+const Information = () => {
     return(
         <div>
             <Helmet 
@@ -12,9 +12,9 @@ const Home = () => {
                     { property: 'og:title', content: APP_NAME },
                 ]}
             />
-            homepage tada
+            Infos
         </div>
     )
 }
 
-export default Home
+export default Information

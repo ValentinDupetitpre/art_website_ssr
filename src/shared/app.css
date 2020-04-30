@@ -1,7 +1,16 @@
 body{
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100%;
 }
 
 .app-wrapper .content{
-    padding-left: 240px;
+    padding: 8px 28px;
+    height: 100%;
+}
+
+@media (min-width: 1000px) {
+    .app-wrapper .content{
+        padding-left: 240px;
+    }
 }

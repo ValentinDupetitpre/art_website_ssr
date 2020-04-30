@@ -1,11 +1,15 @@
 import {
     homePage,
     collectionPage,
+    informationPage,
+    contactPage,
   } from './controller'
   
   import {
     HOME_PAGE_ROUTE,
     COLLECTION_PAGE_ROUTE,
+    INFORMATION_PAGE_ROUTE,
+    CONTACT_PAGE_ROUTE,
   } from '../shared/routes'
   
   import renderApp from './render-app'
@@ -17,6 +21,14 @@ import {
   
     app.get(COLLECTION_PAGE_ROUTE, (req, res) => {
       res.send(renderApp(req.url, collectionPage()))
+    })
+    
+    app.get(INFORMATION_PAGE_ROUTE, (req, res) => {
+      res.send(renderApp(req.url, informationPage()))
+    })
+
+    app.get(CONTACT_PAGE_ROUTE, (req, res) => {
+      res.send(renderApp(req.url, contactPage()))
     })
   
     app.get('/500', () => {

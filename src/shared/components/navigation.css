@@ -84,10 +84,28 @@
     background-color:rgba(0, 0, 0, 0.05);
 }
 
-.open {
+.app-wrapper .hamburger{
+    display: block;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    padding: 8px;
+}
+
+.open{
     transform: translateX(0);
 }
 
-.close {
+.close{
     transform: translateX(-100%);
+}
+
+.blur{
+    position: absolute;
+    width: 100%;
+    height: calc(100vh + 16px);
+    background-color: rgba(0,0,0,0.4);
 }
