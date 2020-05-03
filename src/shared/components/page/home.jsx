@@ -12,7 +12,7 @@ const Home = () => {
                     { property: 'og:title', content: APP_NAME },
                 ]}
             />
-            homepage tada
+            homepage
         </div>
     )
 }
