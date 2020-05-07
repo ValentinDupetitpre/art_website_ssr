@@ -1,0 +1,51 @@
+.admin-page h1{
+    text-align: center;
+}
+
+.collec, .articles {
+    width: 100%;
+}
+
+.create {
+    background-color: white;
+    display: inline-block;
+    width: 40%;
+    border-style: ridge;
+    border-width: 1px;
+    padding: 15px;
+}
+
+.edit {
+    background-color: white;
+    width: 40%;
+    border-style: ridge;
+    border-width: 1px;
+    padding: 15px;
+    float: right;
+}
+
+.input {
+    display: block!important;
+}
+
+.img {
+    margin-top: 1.5rem!important;
+}
+
+.icon {
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
+.send {
+    margin-top: 2rem!important;
+    display: flex!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    justify-content: space-around;
+}
+
+.edit-row {
+    display: flex!important;
+    justify-content: space-between;
+}

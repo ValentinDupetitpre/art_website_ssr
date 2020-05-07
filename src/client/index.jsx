@@ -12,7 +12,7 @@ const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 const wrapApp = (AppComponent) =>
     <BrowserRouter>
         <AppContainer>
-            <AppComponent />
+            <AppComponent initialData={window.__INITIAL_DATA__} />
         </AppContainer>
     </BrowserRouter>
 

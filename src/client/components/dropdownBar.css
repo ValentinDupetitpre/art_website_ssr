@@ -1,0 +1,9 @@
+.expansion {
+    background-color: #FAFAFA!important;
+}
+
+.expansion .title {
+    border-bottom-style: solid!important;
+    border-color: #D7D7D7!important;
+    border-width: 0.1px!important;
+}
