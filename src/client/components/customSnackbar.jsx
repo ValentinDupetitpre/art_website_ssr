@@ -18,10 +18,6 @@ function CustomSnackbar(props) {
     setOpen(false);
   }
 
-  const closeStyle = {
-    padding: '5px'
-  }
-
   return (
     <div>
       <Snackbar
@@ -41,7 +37,6 @@ function CustomSnackbar(props) {
             key="close"
             aria-label="Close"
             color="inherit"
-            className={closeStyle}
             onClick={handleClose}
           >
             <CloseIcon />

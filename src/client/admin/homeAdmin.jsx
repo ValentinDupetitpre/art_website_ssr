@@ -8,7 +8,7 @@ import FileUploader from '../components/fileUploader'
 import CustomSnackbar from '../components/customSnackbar'
 
 import './homeAdmin.css'
-// import configURL from '../../helper/constant'
+import {HOME_PAGE_ROUTE_MANAGEMENT, homePageEndpointRoute} from '../../shared/routes'
 
 function HomeAdmin() {
     const [homePageData, setHomePageData] = useState({})
@@ -23,7 +23,7 @@ function HomeAdmin() {
     }, [])
 
     async function getHomePageData() {
-        await fetch(`/home-data`)
+        await fetch(HOME_PAGE_ROUTE_MANAGEMENT)
         .then(response => response.json())
         .then(result => {
             if(!result[0]) return
@@ -60,7 +60,7 @@ function HomeAdmin() {
             'content-type': 'application/json',
             accept: 'application/json',
         }
-        await fetch(`/home-data/`+homePageData.id, {
+        await fetch(homePageEndpointRoute(homePageData.id), {
             method: 'PUT',
             headers,
             body,

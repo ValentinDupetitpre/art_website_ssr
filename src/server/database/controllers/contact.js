@@ -1,3 +1,4 @@
+import renderApp from '../../render-app'
 // import config from '../config/index'
 // import nodemailer from 'nodemailer'
 // const transporter = nodemailer.createTransport({
@@ -9,8 +10,8 @@
 // })
 
 const Contact = {
-    getPage(){
-        return null
+    getPage(req, res){
+        res.send(renderApp(req.url, null))
     },
     // send(req, res){
     //     const mailOptions = {
