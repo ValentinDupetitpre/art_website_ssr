@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { WDS_PORT } from './src/shared/config'
 import { isProd } from './src/shared/util'
 
@@ -23,7 +24,7 @@ export default {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader,'css-loader']
       }
     ],
   },
@@ -48,6 +49,9 @@ export default {
     }),
     new webpack.DefinePlugin({
       'process.env.BROWSER': JSON.stringify(true),
+    }),
+    new MiniCssExtractPlugin({
+      filename: "bundle.css"
     })
   ],
 }

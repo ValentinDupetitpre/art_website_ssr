@@ -1,5 +1,4 @@
 import models from '../models'
-
 import renderApp from '../../render-app'
 
 const Home = {
@@ -22,14 +21,15 @@ const Home = {
             bloc1: req.body.bloc1,
             bloc2: req.body.bloc2,
             bloc3: req.body.bloc3,
+            pic1: req.body.pic1,
+            pic2: req.body.pic2,
+            pic3: req.body.pic3,
           })
           .then(home => res.status(201).send(home))
           .catch(err => res.status(400).send(err))
     },
 
     update(req, res) {
-        console.log("dnas le update")
-        console.log(req)
         return models.home
             .findByPk(req.params.num)
             .then(home => {
@@ -42,6 +42,9 @@ const Home = {
                     bloc1: req.body.bloc1 || home.bloc1,
                     bloc2: req.body.bloc2 || home.bloc2,
                     bloc3: req.body.bloc3 || home.bloc3,
+                    pic1: req.body.pic1 || home.pic1,
+                    pic2: req.body.pic2 || home.pic2,
+                    pic3: req.body.pic3 || home.pic3,
                 })
                     .then(() => res.status(200).json(home))
                     .catch((err) => res.status(400).send('soucis '+err))

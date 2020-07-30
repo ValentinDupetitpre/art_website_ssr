@@ -52,8 +52,8 @@ function HomeAdmin() {
             bloc2: data.get('bloc2'),
             bloc3: data.get('bloc3'),
             pic1: blob1,
-            pic2: blob2,
-            pic3: blob3,
+            // pic2: blob2,
+            // pic3: blob3,
         })
 
         const headers = {

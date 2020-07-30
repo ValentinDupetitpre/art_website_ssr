@@ -24,6 +24,7 @@ const renderApp = (location, routerContext) => {
         ${head.meta}
         <link rel="icon" type="image/x-icon" href="${STATIC_PATH}/favicon.ico">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="${isProd ? STATIC_PATH : `http://localhost:${WDS_PORT}/dist`}/bundle.css">
         <script>window.__INITIAL_DATA__ =${serialize(routerContext)}</script>
       </head>
       <body>

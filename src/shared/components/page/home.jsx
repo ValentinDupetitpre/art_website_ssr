@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 
 import  {APP_NAME} from '../../config'
@@ -6,7 +6,20 @@ import  {APP_NAME} from '../../config'
 import './home.css'
 
 const Home = (props) => {
-    const homeData= props.initialData
+    const [homeData, setHomeData]= useState(props.initialData)
+
+    useEffect(() => {
+        if(!props.initialData){
+            fetchData()
+        }
+    }, [props.initialData])
+
+    const fetchData = async()=>{
+        await fetch(`/home`)
+        .then(response => response.json())
+        .then(result => setHomeData(result[0]))
+    }
+
     return(
         <div>
             <Helmet 
