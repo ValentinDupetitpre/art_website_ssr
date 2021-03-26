@@ -11,7 +11,7 @@ import renderApp from '../../render-app'
 
 const Contact = {
     getPage(req, res){
-        res.send(renderApp(req.url, null))
+        res.send(renderApp(req.url, {}))
     },
     // send(req, res){
     //     const mailOptions = {

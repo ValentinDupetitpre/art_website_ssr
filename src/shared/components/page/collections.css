@@ -1,0 +1,28 @@
+.collection-page{
+    background: #abbaab !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+}
+
+.collection{
+    padding-top: 1.5rem;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 1.5rem;
+}
+
+.collection > .collection-title{
+    padding: 1.5rem 0;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #424242;
+}
+
+.collection-card{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
